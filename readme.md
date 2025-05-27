@@ -12,7 +12,7 @@ This is a microservices-based e-commerce platform with three core services:
   - Golang
   - NATS
 - **Database**: 
-  - 
+  - MongoDB
 - **Caching**:
   - Redis
 - **Other**:
