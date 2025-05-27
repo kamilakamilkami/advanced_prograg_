@@ -151,34 +151,33 @@ service OrderService {
   rpc GetOrdersByUser    (GetOrdersByUserRequest) returns (GetOrdersByUserResponse);
 }
 ```
-## 🔑 9.Key Features
+## 9.Key Features
 
-### 👤 User Management
-- Secure user registration with password hashing
-- JWT-based authentication for stateless session management
-- User profile retrieval via unique user ID
+### User Management
+- Secure registration with password hashing
+- JWT-based authentication for stateless user sessions
+- User profile retrieval by user ID
 
-### 📦 Product Catalog
-- Full CRUD operations implemented over gRPC
-- Advanced filtering and pagination for efficient product listings
-- Redis caching for optimized access to frequently requested products
-- Real-time stock adjustment via NATS event-driven architecture
+### Product Catalog
+- Full CRUD functionality implemented via gRPC
+- Support for pagination and filtering of product listings
+- Redis caching to enhance performance of frequent read operations
+- Real-time stock adjustment via NATS message subscriptions
 
-### 🛒 Order Processing
-- Order creation and validation using structured protobuf messages
-- Event-based inventory synchronization using NATS
-- Real-time order status updates with gRPC PATCH
-- Authenticated user order history with filtering support
+### Order Processing
+- Order creation and input validation using protobuf contracts
+- Event-driven inventory updates through NATS
+- Order status updates with persistent storage
+- Order history retrieval scoped per authenticated user
 
-### ⚙️ Infrastructure & Operations
-- Containerized architecture using Docker for MongoDB, Redis, and NATS
-- Per-service MongoDB database with isolated models
-- Redis for low-latency caching and performance boost
-- Centralized API Gateway using Gin to route all HTTP requests
+### Infrastructure and Operations
+- Dockerized deployment of MongoDB, Redis, and NATS
+- Service-level isolation using Go Modules and separate Docker containers
+- Redis integration for performance optimization and caching
+- Centralized HTTP gateway built with Gin for external client interaction
 
-### ✅ Testing & Quality Assurance
-- Unit and integration tests for all major services and data flows
-- End-to-end flow validation using Postman and curl
-- Stable, testable microservice environment with green build status
-
+### Testing and Quality Assurance
+- Comprehensive unit and integration test coverage across all services
+- Test-driven development practices to ensure system reliability
+- Verified build consistency with all tests passing
 
