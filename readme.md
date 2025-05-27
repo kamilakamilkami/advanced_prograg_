@@ -84,8 +84,8 @@ cd services/user-service      && go test ./...
 cd services/inventory-service && go test ./...
 cd services/order-service     && go test ./...
 ```
-## Unit tests cover business logic (use-cases).
-## Integration tests verify MongoDB, Redis, and NATS interactions.
+ - **Unit tests cover business logic (use-cases).**
+- **Integration tests verify MongoDB, Redis, and NATS interactions.**
 
 ## 7.HTTP Endpoints
 ### Auth Service 
