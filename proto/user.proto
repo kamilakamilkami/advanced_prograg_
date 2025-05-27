@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "/userpb";  
+
+// Message for user registration
+message UserRequest {
+  string username = 1;
+  string password = 2;  // In real-world scenarios, passwords should be hashed
+}
+
+// Message for user authentication
+message AuthRequest {
+  string username = 1;
+  string password = 2;
+}
+
+// Response for both registration and authentication
+message UserResponse {
+  string user_id = 1;
+  bool success = 2;
+}
+
+// User Profile
+message UserProfile {
+  string user_id = 1;
+  string username = 2;
+  string password = 3; 
+}
+
+// Service definition
+service UserService {
+  rpc RegisterUser(UserRequest) returns (UserResponse);
+  rpc AuthenticateUser(AuthRequest) returns (UserResponse);
+  rpc GetUserProfile(UserID) returns (UserProfile);
+}
+
+// Request for fetching user profile
+message UserID {
+  string user_id = 1;
+}
