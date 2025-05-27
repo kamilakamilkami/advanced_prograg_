@@ -66,16 +66,16 @@ done
 ```
 ## 5. Running the Platform
 
-# Auth Service (gRPC → 50053)
+### Auth Service (gRPC → 50053)
 cd services/user-service && go run main.go
 
-# Products Service (gRPC → 5001)
+### Products Service (gRPC → 5001)
 cd services/inventory-service && go run main.go
 
-# Orders Service (gRPC → 5002)
+### Orders Service (gRPC → 5002)
 cd services/order-service && go run main.go
 
-# API Gateway (HTTP → 8080)
+### API Gateway (HTTP → 8080)
 cd api-gateway && go run main.go
 
 ## 6. Running Tests
