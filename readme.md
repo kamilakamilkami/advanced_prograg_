@@ -23,7 +23,7 @@ This is a microservices-based e-commerce platform with three core services:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/freboy1/Final.git
+   git clone https://github.com/kamilakamilkami/advanced_prograg_.git
    ```
 3. **Start services**:
    ```bash
